@@ -21,4 +21,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('json/', views.json_data, name='json_data'),
+    path('my_brakepad_app/', views.MyAppView.as_view(), name='myapp'),
 ]
