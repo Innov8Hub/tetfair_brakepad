@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSON Data Display</title>
+</head>
+
+<body>
+    <h1>JSON Data Display</h1>
+
+    <ul>
+        {% for item in data %}
+        <li>{{ item.tc1 }} - {{ item.tc2 }} - {{ item.ambientTemp }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
