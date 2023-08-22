@@ -15,11 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from . import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('json/', views.json_data, name='json_data'),
-    path('my_brakepad_app/', views.MyAppView.as_view(), name='myapp'),
+    path('my_brakepad_app/', include('my_brakepad_app.urls')),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
